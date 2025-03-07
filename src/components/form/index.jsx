@@ -27,7 +27,7 @@ const Form = () => {
           <p>&#65343;</p>
 
           <div>
-            <p>No account? Create one</p>
+            <p>No account? <span>Create one</span></p>
             <p>Cant access your account?</p>
           </div>
 
