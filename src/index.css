@@ -17,8 +17,9 @@ html{
 
 }
 
-.body{
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+body{
+    background: radial-gradient(circle, rgb(215, 235, 241) 0%,rgb(252, 237, 240) 100%, rgb(182, 195, 190) 0%);
+    /* background-color: black; */
     height: 80vh;
     line-height: 1.25rem;
 }

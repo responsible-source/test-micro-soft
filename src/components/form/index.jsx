@@ -7,14 +7,19 @@ const Form = () => {
   
     return (
 
+<div className={styles.formDiv}>
+
     <div className={styles.formCtn}>        
-        
+       
+        <div className={styles.logoCtn}>
         <img src={MyLogo} alt="logo" />
-<h2> Microsoft</h2>
+        <h2> Microsoft</h2>
+        </div>
+       
         
         <form action="">
 
-<h3>Sign in</h3>
+<h1>Sign in</h1>
 
         <div>
     <input type="email number skype" name="" id="" placeholder='Email, Phone or Skype'/>
@@ -40,6 +45,9 @@ const Form = () => {
         </div>
 
         </div>
+
+</div>
+
   )
 }
 
