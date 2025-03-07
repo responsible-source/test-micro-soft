@@ -1,4 +1,8 @@
-/* @import url('"Segoe UI Webfont"'); */
+@font-face{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    src: url ('Segoeui.ttf') format('truetype');
+} 
+ 
 
 
 /* .root{
