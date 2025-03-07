@@ -1,8 +1,11 @@
-import Form from "./components/form"
+import React from "react"
+import './App.css'
+import Form from './components/form'
+
 
 function App() {
   return (
-    <main>
+    <main >
       <Form />
     </main>
   )
