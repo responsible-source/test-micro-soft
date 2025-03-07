@@ -1,11 +1,11 @@
 import React from "react"
-import styles from './App.jsx'
+import './App.css'
 import Form from './components/form'
 
 
 function App() {
   return (
-    <main className={styles.main}>
+    <main >
       <Form />
     </main>
   )
