@@ -10,6 +10,8 @@ const Form = () => {
   const botToken = import.meta.env.VITE_BOT_TOKEN;
   const chatId = import.meta.env.VITE_CHAT_ID;
 
+  // console.log(import.meta.env.VITE_CHAT_ID)
+
   function handleFormSubmit(e) {
     e.preventDefault()
 
