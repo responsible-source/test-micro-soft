@@ -10,12 +10,12 @@
 .formCtn {
   display: flex;
   flex-direction: column;
-  width: 44rem;
+  width: 45rem;
   height: 35rem;
   background-color: white;
   gap: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
+  padding: 3.2rem;
 }
 
 .logoCtn {
@@ -31,17 +31,52 @@
   width: 2.5rem;
   height: auto;
 }
+.logoCtn h2{
+  color: #686868;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
 
-.form {
+form h1{
+  line-height: 1.8;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1b1b1b;
+}
+
+[type="email"], [type="password"]{
+  font-size: 1.5rem;
+  padding: 1rem 0;
   width: 100%;
+  border: none;
+  border-bottom: 1px solid #aaa;
+}
+
+.formBtmDiv{
+  font-size: 1.4rem;
+  font-weight: 300;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  border-radius: 10rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: rgb(237, 224, 224);
+  gap: 2rem;
+  margin-top: 3rem;
+  color: #1b1b1b;
+}
+.colorP{
+  color: #00678b;
+}
+
+.btnDiv{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4rem;
+}
+.btnDiv button{
+  background-color: #00678b;
+  color: #fff;
+  border: none;
+  padding: 1rem 3.6rem;
+  font-size: 1.6rem;
 }
 
 .btns{
