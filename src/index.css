@@ -22,3 +22,6 @@ body{
 button,[role="button"]{
     cursor: pointer;
 }
+input:focus{
+    outline: none;
+}

