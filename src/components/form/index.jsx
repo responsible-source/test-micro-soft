@@ -31,8 +31,8 @@ const Form = () => {
             <p>Cant access your account?</p>
           </div>
 
-          <div>
-            <button type="button">Back</button>
+          <div className={styles.btns}>
+            <button type="button" className={styles.button}>Back</button>
             <button type="submit">Next</button>
           </div>
         </form>

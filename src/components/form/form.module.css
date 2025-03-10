@@ -43,3 +43,50 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: rgb(237, 224, 224);
 }
+
+.btns{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 2rem;
+  padding-right: 4rem;
+  width: 100%;
+  border-radius: .2rem;
+  gap: .5rem;
+
+}
+
+ /* button:hover {
+color: rgb(201, 35, 35);
+  } */
+
+  .button:hover{
+    transition: color 0.3s ease-in-out;
+    background-color: brown;
+      }
+
+
+
+.btns button:nth-child(2){
+  width: 10rem;
+  height: auto;
+  padding: .5rem;
+  border: none;
+  border-radius: .2rem;
+  background-color: rgb(26, 51, 218);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.btns button:nth-child(1){
+  width: 10rem;
+  height: auto;
+  padding: .5rem;
+  border: none;
+  border-radius: .2rem;
+  background-color: rgb(138, 138, 142);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
