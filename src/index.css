@@ -2,12 +2,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     src: url ('Segoeui.ttf') format('truetype');
 } 
- 
-
-
-/* .root{
-
-} */
 
 *{
     box-sizing: border-box;
@@ -16,14 +10,15 @@
 }
 
 html{
-
     font-size: 10px;
-
 }
 
 body{
     background: radial-gradient(circle, rgb(215, 235, 241) 0%,rgb(252, 237, 240) 100%, rgb(182, 195, 190) 0%);
-    /* background-color: black; */
     height: 80vh;
     line-height: 1.25rem;
+}
+
+button,[role="button"]{
+    cursor: pointer;
 }
