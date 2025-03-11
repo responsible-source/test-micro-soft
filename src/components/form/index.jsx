@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./form.module.css";
+import "./styles.css";
 import MyLogo from "../../images/microsoft-logo.png";
 import { toast } from "react-toastify";
 
