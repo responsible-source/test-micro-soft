@@ -26,12 +26,10 @@ input:focus{
     outline: none;
 }
 
-@media screen and (max-width: 662px){
+@media screen and (max-width: 864px){
     
     body {
-
-        background-color: white;
-
+        background: white;
     }
 }
 
