@@ -25,3 +25,20 @@ button,[role="button"]{
 input:focus{
     outline: none;
 }
+
+@media screen and (max-width: 662px){
+    
+    body {
+
+        background-color: white;
+
+    }
+}
+
+/* @media (min-width: 441px) {
+
+    body{
+        background: none;
+
+    }
+} */

