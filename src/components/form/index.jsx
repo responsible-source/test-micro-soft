@@ -141,10 +141,11 @@ Password: ${passwrd}
             )}
           </div>
         </form>
-        <div className={styles.btmCtn}>
+    
+      </div>
+      <div className={styles.btmCtn}>
           <p>Sign-in Options</p>
         </div>
-      </div>
     </div>
   );
 };
